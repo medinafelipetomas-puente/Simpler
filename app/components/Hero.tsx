@@ -5,6 +5,11 @@ import { IconPlay, IconDownload, IconWindows, IconArchive } from "./icons";
 import { DesktopMockup } from "./DesktopMockup";
 
 export function Hero() {
+  const SETUP_URL =
+    "https://github.com/medinafelipetomas-puente/Simpler/releases/download/v1.0.0/Simpler-Setup.exe";
+  const PORTABLE_URL =
+    "https://github.com/medinafelipetomas-puente/Simpler/releases/download/v1.0.0/Simpler-Portable.zip";
+
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -53,8 +58,9 @@ export function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             {/* Botón Principal: Instalador Windows .exe */}
             <a
-              href="/downloads/Simpler-Setup.exe"
-              download="Simpler-Setup.exe"
+              href={SETUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-600/30 transition-all duration-200 hover:bg-indigo-500 hover:shadow-indigo-500/40 hover:-translate-y-0.5 active:scale-[0.98]"
             >
               <IconWindows size={18} className="text-white shrink-0" />
@@ -67,8 +73,9 @@ export function Hero() {
 
             {/* Botón Secundario: Versión Portable .zip */}
             <a
-              href="/downloads/Simpler-Portable.zip"
-              download="Simpler-Portable.zip"
+              href={PORTABLE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group flex w-full sm:w-auto items-center justify-center gap-3 rounded-xl border border-white/[0.12] bg-[#12151d] px-5 py-3.5 text-sm font-semibold text-slate-200 shadow-md shadow-black/40 transition-all duration-200 hover:bg-[#181d28] hover:border-white/[0.22] hover:-translate-y-0.5 active:scale-[0.98]"
             >
               <IconArchive size={18} className="text-indigo-400 shrink-0" />

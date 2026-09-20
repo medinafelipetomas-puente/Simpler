@@ -6,6 +6,9 @@ import { IconRocket, IconDownload } from "./icons";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const SETUP_URL =
+    "https://github.com/medinafelipetomas-puente/Simpler/releases/download/v1.0.0/Simpler-Setup.exe";
+
   const scrollToSection = (id: string) => {
     setMobileMenuOpen(false);
     const element = document.getElementById(id);
@@ -63,8 +66,9 @@ export function Navbar() {
         {/* CTA: Descargar */}
         <div className="hidden sm:flex items-center gap-3">
           <a
-            href="/downloads/Simpler-Setup.exe"
-            download="Simpler-Setup.exe"
+            href={SETUP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="cursor-pointer inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3.5 py-2 text-xs font-semibold text-white shadow-sm shadow-indigo-600/30 transition-all duration-200 hover:bg-indigo-500 hover:shadow-indigo-500/40 active:scale-[0.98]"
           >
             <IconDownload size={14} />
@@ -134,8 +138,9 @@ export function Navbar() {
               Persistencia & Confiabilidad
             </button>
             <a
-              href="/downloads/Simpler-Setup.exe"
-              download="Simpler-Setup.exe"
+              href={SETUP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 w-full rounded-lg bg-indigo-600 py-2.5 text-center text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 flex items-center justify-center gap-1.5"
               onClick={() => setMobileMenuOpen(false)}
             >
